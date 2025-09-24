@@ -18,7 +18,7 @@ on:
         description: The upstream git repo on github in the format owner/repo
         type: string
         required: true
-        default: qualcomm-linux/qcom-example-package-source
+        default: alsa-project/alsa-ucm-conf
 
       push-on-success:
         description: If the upstream promotion is successful, push the new upstream/<version> tag, upstream/latest and debian/latest new revision branches
