@@ -1,0 +1,42 @@
+name: Promote New Upstream Version
+
+on:
+#  pull_request_target:
+#    branches: [ main ]
+#  push:
+#    branches: [ main ]
+
+  workflow_dispatch:
+    inputs:
+
+      upstream-tag:
+        description: The upstream tag to promote this package repo to. Eg, v1.1.0 or 1.2.0, depending on the versioning style
+        type: string
+        required: true
+
+      upstream-repo:
+        description: The upstream git repo on github in the format owner/repo
+        type: string
+        required: true
+        default: qualcomm-linux/qcom-example-package-source
+
+      push-on-success:
+        description: If the upstream promotion is successful, push the new upstream/<version> tag, upstream/latest and debian/latest new revision branches
+        type: boolean
+        default: false
+
+permissions:
+ contents: read
+ security-events: write
+
+jobs:
+  promote:
+
+    uses: qualcomm-linux/qcom-build-utils/.github/workflows/qcom-promote-upstream-reusable-workflow.yml@development
+    with:
+      qcom-build-utils-ref: development
+      upstream-tag: ${{ inputs.upstream-tag }}
+      upstream-repo: ${{ inputs.upstream-repo }}
+      push-on-success: ${{ inputs.push-on-success }}
+    secrets:
+      ACTIONS_SSH_KEY: ${{ secrets.ACTIONS_SSH_KEY }}

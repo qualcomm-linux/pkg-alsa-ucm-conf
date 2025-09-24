@@ -1,0 +1,36 @@
+name: Build Debian Package
+description: |
+  Builds the debian package represented by this repo at the ref pointed by the debain-ref argument.
+
+on:
+#  pull_request_target:
+#    branches: [ main ]
+#  push:
+#    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+
+      debian-ref:
+        description: The debian ref to build. For example "debian/latest", the ref would be "latest". Or for "debian/1.0.0-1" the ref would be "1.0.0-1 "
+        type: string
+        required: true
+        default: latest
+
+      abi-checker:
+        description: Run the ABI checker or not
+        type: boolean
+        default: false
+
+permissions:
+ contents: read
+ security-events: write
+
+jobs:
+  build:
+    uses: qualcomm-linux/qcom-build-utils/.github/workflows/qcom-build-debian-package-reusable-workflow.yml@development
+    with:
+      qcom-build-utils-ref: development
+      debian-ref: ${{ inputs.debian-ref }}
+      abi-checker: ${{ inputs.abi-checker }}
+    secrets:
+      ACTIONS_SSH_KEY: ${{ secrets.ACTIONS_SSH_KEY }}
