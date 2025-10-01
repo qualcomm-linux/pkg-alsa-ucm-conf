@@ -1,0 +1,47 @@
+From e3397b7f2e47eebac2e60b3ba171fe714786fa4f Mon Sep 17 00:00:00 2001
+From: Bjordis Collaku <bcollaku@qti.qualcomm.com>
+Date: Tue, 30 Sep 2025 22:15:26 -0700
+Subject: [PATCH] ucm2: Qualcomm: x1e80100: Add X1E80100-EVK configuration
+
+---
+ ucm2/Qualcomm/x1e80100/X1E80100-EVK.conf | 19 +++++++++++++++++++
+ ucm2/conf.d/x1e80100/X1E80100-EVK.conf   |  1 +
+ 2 files changed, 20 insertions(+)
+ create mode 100644 ucm2/Qualcomm/x1e80100/X1E80100-EVK.conf
+ create mode 100644 ucm2/conf.d/x1e80100/X1E80100-EVK.conf
+
+diff --git a/ucm2/Qualcomm/x1e80100/X1E80100-EVK.conf b/ucm2/Qualcomm/x1e80100/X1E80100-EVK.conf
+new file mode 100644
+index 0000000..c733145
+--- /dev/null
++++ b/ucm2/Qualcomm/x1e80100/X1E80100-EVK.conf
+@@ -0,0 +1,19 @@
++Syntax 4
++
++SectionUseCase."HiFi" {
++	File "/Qualcomm/x1e80100/HiFi.conf"
++	Comment "HiFi quality Music."
++}
++
++BootSequence [
++	cset "name='HPHL Volume' 20"
++	cset "name='HPHR Volume' 20"
++	cset "name='ADC2 Volume' 10"
++]
++
++Include.card-init.File "/lib/card-init.conf"
++Include.ctl-remap.File "/lib/ctl-remap.conf"
++Include.wcd-init.File "/codecs/wcd938x/init.conf"
++Include.wsa-init.File "/codecs/wsa884x/four-speakers/init.conf"
++Include.wsam-init.File "/codecs/qcom-lpass/wsa-macro/four-speakers/init.conf"
++Include.rxm-init.File "/codecs/qcom-lpass/rx-macro/init.conf"
+diff --git a/ucm2/conf.d/x1e80100/X1E80100-EVK.conf b/ucm2/conf.d/x1e80100/X1E80100-EVK.conf
+new file mode 100644
+index 0000000..57008c8
+--- /dev/null
++++ b/ucm2/conf.d/x1e80100/X1E80100-EVK.conf
+@@ -0,0 +1 @@
++../../Qualcomm/x1e80100/X1E80100-EVK.conf
+-- 
+2.43.0
+

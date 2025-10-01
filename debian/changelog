@@ -1,3 +1,11 @@
+alsa-ucm-conf (1.2.14-2) unstable; urgency=medium
+
+  * Add patch for X1E80100-EVK configuration (0004)
+    - Patch based on upstream PR #608 (now closed).
+    - Adds configuration files under ucm2/Qualcomm/x1e80100 and conf.d/x1e80100.
+
+ -- Bjordis Collaku <bcollaku@qti.qualcomm.com>  Wed, 01 Oct 2025 13:33:05 -0700
+
 alsa-ucm-conf (1.2.14-1) unstable; urgency=medium
 
   * New upstream release.
