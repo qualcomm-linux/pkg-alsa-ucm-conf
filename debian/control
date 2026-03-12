@@ -1,6 +1,7 @@
 Source: alsa-ucm-conf
 Section: libs
-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+Maintainer: Agathe Porte <agathe.porte@oss.qualcomm.com>
+XSBC-Original-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
 Uploaders: Jordi Mallach <jordi@debian.org>,
            Elimar Riesebieter <riesebie@lxtec.de>,
            Luke Yelavich <themuso@ubuntu.com>
