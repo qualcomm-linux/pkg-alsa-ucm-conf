@@ -1,0 +1,31 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+name: Debusine
+
+on:
+  pull_request:
+    branches:
+      - 'qcom/debian/**'
+  workflow_dispatch:
+    inputs:
+      release:
+        description: Run release step
+        type: boolean
+        required: true
+        default: true
+
+jobs:
+  debusine:
+    name: Debusine
+    uses: qualcomm-linux/debusine-action/.github/workflows/debusine.yml@main
+    with:
+      target_branch: ${{ github.event_name == 'pull_request' && github.base_ref || github.ref_name }}
+      release: ${{ github.event_name == 'workflow_dispatch' && inputs.release || false }}
+    permissions:
+      contents: write
+      deployments: write
+    secrets:
+      DEBUSINE_USER: ${{ secrets.DEBUSINE_USER }}
+      DEBUSINE_TOKEN: ${{ secrets.DEBUSINE_TOKEN }}
+      DEBUSINE_RELEASE_TOKEN: ${{ secrets.DEBUSINE_RELEASE_TOKEN }}
