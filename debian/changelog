@@ -1,6 +1,6 @@
 alsa-ucm-conf (1.2.14-1qcom0.3~) UNRELEASED; urgency=medium
 
-  * Unreleased changes
+  * No change rebuild for migration to Debusine production.
 
  -- Robie Basak <robie.basak@oss.qualcomm.com>  Fri, 01 May 2026 17:01:21 +0100
 
