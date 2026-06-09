@@ -1,8 +1,9 @@
-alsa-ucm-conf (1.2.14-1qcom0.3~) UNRELEASED; urgency=medium
+alsa-ucm-conf (1.2.14-1qcom0.3) trixie; urgency=medium
 
+  [ Robie Basak ]
   * No change rebuild for migration to Debusine production.
 
- -- Robie Basak <robie.basak@oss.qualcomm.com>  Fri, 01 May 2026 17:01:21 +0100
+ -- root <root@7fd54f62c59a>  Tue, 09 Jun 2026 13:53:52 +0000
 
 alsa-ucm-conf (1.2.14-1qcom0.2) trixie; urgency=medium
 
