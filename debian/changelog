@@ -1,3 +1,12 @@
+alsa-ucm-conf (1.2.16-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Rename debian branch to debian/latest, as per DEP14.
+  * Update Standards-Version to 4.7.4.
+  * Add minimal salsa-ci.yml.
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 10 Jun 2026 10:52:51 +0200
+
 alsa-ucm-conf (1.2.15.3-1) unstable; urgency=medium
 
   * New upstream release.
