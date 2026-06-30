@@ -1,3 +1,11 @@
+alsa-ucm-conf (1.2.16.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Move to Debhelper compat v14.
+  * Remove ${misc:Depends}, it's now implicit with dh14.
+
+ -- Jordi Mallach <jordi@debian.org>  Tue, 30 Jun 2026 17:28:53 +0200
+
 alsa-ucm-conf (1.2.16-1) unstable; urgency=medium
 
   * New upstream release.
