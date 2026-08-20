@@ -1,10 +1,11 @@
-alsa-ucm-conf (1.2.16.1-1qli1~) UNRELEASED; urgency=medium
+alsa-ucm-conf (1.2.16.1-1qli1) forky; urgency=medium
 
+  [ Christopher Obbard ]
   * d/patches: remove patches applied upstream
   * d/patches: backport Lenovo Yoga Slim7x Gen11 support
   * d/patches: backport Arduino Monza display port audio support
 
- -- Christopher Obbard <chris.obbard@oss.qualcomm.com>  Thu, 20 Aug 2026 14:42:31 +0100
+ -- Debusine Action Bot <noreply@bot.invalid>  Thu, 20 Aug 2026 14:08:01 +0000
 
 alsa-ucm-conf (1.2.16.1-1) unstable; urgency=medium
 
