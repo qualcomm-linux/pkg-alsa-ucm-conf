@@ -1,0 +1,74 @@
+From: Srinivas Kandagatla <srinivas.kandagatla@oss.qualcomm.com>
+Date: Tue, 2 Jun 2026 06:29:59 +0000
+Subject: ucm2: Qualcomm: add Lenovo Yoga Slim7x Gen11 support
+
+Yoga Slim 7x Gen 11 supports:
+	- 4 speakers
+	- 4 dmics
+	- Display ports
+
+This patch adds support to Speaker and DMIC's for now.
+
+Closes: https://github.com/alsa-project/alsa-ucm-conf/pull/787
+Signed-off-by: Srinivas Kandagatla <srinivas.kandagatla@oss.qualcomm.com>
+Signed-off-by: Jaroslav Kysela <perex@perex.cz>
+Origin: upstream, https://github.com/alsa-project/alsa-ucm-conf/commit/bbe99eb28f48c6471488287a39f0cc91fbcaa7a5
+Last-Update: 2026-08-15
+---
+ .../glymur/{GLYMUR-CRD.conf => LENOVO-Slim-7x.conf}         |  2 +-
+ ucm2/Qualcomm/glymur/{HiFi.conf => Slim7x-HiFi.conf}        |  0
+ ucm2/Qualcomm/glymur/glymur.conf                            | 13 +++++++++++++
+ ucm2/conf.d/glymur/glymur.conf                              |  1 +
+ 4 files changed, 15 insertions(+), 1 deletion(-)
+ copy ucm2/Qualcomm/glymur/{GLYMUR-CRD.conf => LENOVO-Slim-7x.conf} (87%)
+ copy ucm2/Qualcomm/glymur/{HiFi.conf => Slim7x-HiFi.conf} (100%)
+ create mode 100644 ucm2/Qualcomm/glymur/glymur.conf
+ create mode 120000 ucm2/conf.d/glymur/glymur.conf
+
+diff --git a/ucm2/Qualcomm/glymur/GLYMUR-CRD.conf b/ucm2/Qualcomm/glymur/LENOVO-Slim-7x.conf
+similarity index 87%
+copy from ucm2/Qualcomm/glymur/GLYMUR-CRD.conf
+copy to ucm2/Qualcomm/glymur/LENOVO-Slim-7x.conf
+index 15deae9..2b21bd7 100755
+--- a/ucm2/Qualcomm/glymur/GLYMUR-CRD.conf
++++ b/ucm2/Qualcomm/glymur/LENOVO-Slim-7x.conf
+@@ -1,7 +1,7 @@
+ Syntax 4
+ 
+ SectionUseCase."HiFi" {
+-	File "/Qualcomm/glymur/HiFi.conf"
++	File "/Qualcomm/glymur/Slim7x-HiFi.conf"
+ 	Comment "HiFi quality Music."
+ }
+ 
+diff --git a/ucm2/Qualcomm/glymur/HiFi.conf b/ucm2/Qualcomm/glymur/Slim7x-HiFi.conf
+similarity index 100%
+copy from ucm2/Qualcomm/glymur/HiFi.conf
+copy to ucm2/Qualcomm/glymur/Slim7x-HiFi.conf
+diff --git a/ucm2/Qualcomm/glymur/glymur.conf b/ucm2/Qualcomm/glymur/glymur.conf
+new file mode 100644
+index 0000000..f0f016e
+--- /dev/null
++++ b/ucm2/Qualcomm/glymur/glymur.conf
+@@ -0,0 +1,13 @@
++Syntax 4
++
++Define.DMI_info "${sys:devices/virtual/dmi/id/board_vendor}-${sys:devices/virtual/dmi/id/product_family}-${sys:devices/virtual/dmi/id/board_name}"
++
++# 4x WSA Speakers | 4x Microphones | 3x DP/HDMI
++If.LENOVOSlim7x {
++	Condition {
++		Type RegexMatch
++		String "${var:DMI_info}"
++		Regex "LENOVO.*(Yoga Slim 7).*"
++	}
++	True.Include.7x.File "/Qualcomm/glymur/LENOVO-Slim-7x.conf"
++}
+diff --git a/ucm2/conf.d/glymur/glymur.conf b/ucm2/conf.d/glymur/glymur.conf
+new file mode 120000
+index 0000000..92d8fb1
+--- /dev/null
++++ b/ucm2/conf.d/glymur/glymur.conf
+@@ -0,0 +1 @@
++../../Qualcomm/glymur/glymur.conf
+\ No newline at end of file
