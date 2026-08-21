@@ -1,3 +1,64 @@
+alsa-ucm-conf (1.2.16.1-1qli1) forky; urgency=medium
+
+  [ Christopher Obbard ]
+  * d/patches: remove patches applied upstream
+  * d/patches: backport Lenovo Yoga Slim7x Gen11 support
+  * d/patches: backport Arduino Monza display port audio support
+
+ -- Debusine Action Bot <noreply@bot.invalid>  Thu, 20 Aug 2026 14:08:01 +0000
+
+alsa-ucm-conf (1.2.16.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Move to Debhelper compat v14.
+  * Remove ${misc:Depends}, it's now implicit with dh14.
+
+ -- Jordi Mallach <jordi@debian.org>  Tue, 30 Jun 2026 17:28:53 +0200
+
+alsa-ucm-conf (1.2.16-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Rename debian branch to debian/latest, as per DEP14.
+  * Update Standards-Version to 4.7.4.
+  * Add minimal salsa-ci.yml.
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 10 Jun 2026 10:52:51 +0200
+
+alsa-ucm-conf (1.2.15.3-1qcom1) unstable; urgency=medium
+
+  * add ucm2 Glymur CRD profile
+  * Update d/gbp.conf for debian/qcom-next
+
+ -- Agathe Porte <agathe.porte@oss.qualcomm.com>  Mon, 16 Mar 2026 13:44:25 +0100
+
+alsa-ucm-conf (1.2.15.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update dh_fixperms override.
+  * Update copyright years.
+  * Fix typo in patch description.
+
+ -- Jordi Mallach <jordi@debian.org>  Mon, 19 Jan 2026 10:37:17 +0100
+
+alsa-ucm-conf (1.2.15.1-1) unstable; urgency=medium
+
+  * New upstream release.
+    - fixes regressions for some cards (closes: #1123857, #1124077)
+  * Remove redundant Priority control field.
+  * Update Standards-Version to 4.7.3.
+  * Tighten libasound2 dep to >= 1.2.15 for Syntax 8 support
+    (closes: #1123852).
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 07 Jan 2026 23:30:53 +0100
+
+alsa-ucm-conf (1.2.15-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Move debian-watch file to version 5 format.
+  * Drop redundant Rules-Requires-Root control field.
+
+ -- Jordi Mallach <jordi@debian.org>  Thu, 11 Dec 2025 09:18:47 +0100
+
 alsa-ucm-conf (1.2.14-1qcom0.4~) UNRELEASED; urgency=medium
 
   * Unreleased changes
