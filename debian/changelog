@@ -1,10 +1,11 @@
-alsa-ucm-conf (1.2.16.1-1qli1~bpo13+1~) UNRELEASED; urgency=medium
+alsa-ucm-conf (1.2.16.1-1qli1~bpo13+1) trixie; urgency=medium
 
+  [ Christopher Obbard ]
   * Rebuild for trixie-backports.
   * Revert "Move to Debhelper compat v14."
   * Revert "Remove ${misc:Depends}, it's now implicit with dh14."
 
- -- Christopher Obbard <chris.obbard@oss.qualcomm.com>  Fri, 21 Aug 2026 15:25:31 +0100
+ -- Debusine Action Bot <noreply@bot.invalid>  Fri, 21 Aug 2026 14:30:39 +0000
 
 alsa-ucm-conf (1.2.16.1-1qli1) forky; urgency=medium
 
