@@ -17,3 +17,4 @@ lp2159957-rt713-rt1320-fix-input-output.patch
 lp2164729-ucm2-sof-soundwire-Add-tas2783-support.patch
 lp2164728-USB-Audio-ALC4080-Update-NVIDIA-DGX-front-mic-jack-n.patch
 0004-ucm2-Qualcomm-sa8775p-Remove-Fixed-channel-setting-.patch
+0005-ucm2-Qualcomm-qcs8300-Remove-Fixed-channel-setting-.patch
