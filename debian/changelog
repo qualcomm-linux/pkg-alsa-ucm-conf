@@ -1,3 +1,9 @@
+alsa-ucm-conf (1.2.15.3-1ubuntu1.7qcom4~) UNRELEASED; urgency=medium
+
+  * WIP — update changelog before next release
+
+ -- Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>  Tue, 03 Nov 2026 18:13:11 +0000
+
 alsa-ucm-conf (1.2.15.3-1ubuntu1.7qcom3) resolute; urgency=medium
 
   [ Ubuntu Developers ]
