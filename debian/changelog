@@ -1,8 +1,9 @@
-alsa-ucm-conf (1.2.15.3-1ubuntu1.7qcom3) UNRELEASED; urgency=medium
+alsa-ucm-conf (1.2.15.3-1ubuntu1.7qcom3) resolute; urgency=medium
 
+  [ Ubuntu Developers ]
   * Minor verson bump to re-publish 
 
- -- Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>  Tue, 03 Nov 2026 05:13:52 +0000
+ -- GitHub Service Bot <githubservice@qti.qualcomm.com>  Tue, 03 Nov 2026 18:07:49 +0000
 
 alsa-ucm-conf (1.2.15.3-1ubuntu1.7qcom2) resolute; urgency=medium
 
